@@ -16,12 +16,37 @@ function Museums() {
 
   return (
     <div className="container">
-      <h1>Museums</h1>
-      <ul id="lista">
+      <div className="row mt-3">
+        <p>Home &gt; Museos</p>
+      </div>
+
+      <div className="row" id="tituloVitrina">
+        <h1>Museos</h1>
+      </div>
+
+      <div className="pb-4">
+        <hr></hr>
+      </div>
+
+      <div className="row d-flex justify-content-around">
         {museums.map((museums) => (
-          <li key={museums.id}>{museums.name}</li>
+          <div className="card" key={museums.id}>
+            <img
+              className="card-img-top mx-auto"
+              src={museums.image}
+              alt={museums.name}
+            ></img>
+            <div className="card-body">
+              <p className="card-text" id="nombreGaleria">
+                {museums.name}
+              </p>
+              <p className="card-text" id="nombreCiudad">
+                {museums.city}
+              </p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
 
       <ul>{}</ul>
     </div>

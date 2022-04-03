@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&family=Sevillana&display=swap');
 
 
-#lista{
-    background-color: aqua;
-}
-
 #menuList{
 
     list-style-type: none;
@@ -36,7 +32,7 @@
 }
 
 #navBar{
-    position: absolute;
+
     height: 108px;
     left: 0px;
     top: 0px;
@@ -66,4 +62,60 @@
     color: #000000;
 
     padding-right: 55px;
+}
+
+#tituloVitrina{
+    font-family: 'Roboto';
+    font-style: normal;
+    text-align: center;
+    font-weight: 800;
+    font-size: 32px;
+
+    color: #000000;
+    background: #C4C4C4;
+}
+
+hr{
+    border: 1px solid #000000;
+}
+
+.card{
+    width: 266px;
+    height: 290px;
+    background: #C4C4C4;   
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.card-img-top{
+    width: 178px;
+    height: 143px;
+    margin-top: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;  
+}
+
+#nombreGaleria{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 0%;
+  
+    color: #000000;
+  
+}
+
+#nombreCiudad{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: #000000;
 }
