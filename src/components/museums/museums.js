@@ -33,6 +33,7 @@ function Museums() {
           <div className="card" key={museums.id}>
             <img
               className="card-img-top mx-auto"
+              id="imagenMuseo"
               src={museums.image}
               alt={museums.name}
             ></img>
