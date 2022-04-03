@@ -72,7 +72,11 @@
     font-size: 32px;
 
     color: #000000;
+}
+
+#vitrina{
     background: #C4C4C4;
+    padding-top: 7px;
 }
 
 hr{

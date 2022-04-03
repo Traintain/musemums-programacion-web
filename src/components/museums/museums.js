@@ -20,8 +20,8 @@ function Museums() {
         <p>Home &gt; Museos</p>
       </div>
 
-      <div className="row" id="tituloVitrina">
-        <h1>Museos</h1>
+      <div className="row" id="vitrina">
+        <h1 id="tituloVitrina">MUSEOS</h1>
       </div>
 
       <div className="pb-4">
