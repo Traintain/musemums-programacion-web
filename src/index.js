@@ -7,4 +7,4 @@ const root = ReactDOMClient.createRoot(container);
 
 /**Los componentes pueden declararse como una constante o como una función */
 
-root.render(<Museums />, document.getElementById("root"));
+root.render(<Museums />);

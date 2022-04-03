@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&family=Sevillana&display=swap');
+
+
+#lista{
+    background-color: aqua;
+}
+
+#menuList{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+
+    color: #000000;
+}
+
+#menuItem{
+    float: Left;
+    display: block;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+
+    padding-right: 55px;
+}
+
+#navBar{
+    position: absolute;
+    height: 108px;
+    left: 0px;
+    top: 0px;
+    
+    background: #C4C4C4;
+}
+
+#title{
+    font-family: 'Sevillana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+}
+
+#selected{
+    float: Left;
+    display: block;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+    padding-right: 55px;
+}

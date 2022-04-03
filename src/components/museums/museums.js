@@ -15,9 +15,9 @@ function Museums() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>Museums</h1>
-      <ul>
+      <ul id="lista">
         {museums.map((museums) => (
           <li key={museums.id}>{museums.name}</li>
         ))}
