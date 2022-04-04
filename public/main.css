@@ -132,9 +132,19 @@ hr{
     color: #000000;
 }
 
+#tarjetaObra{
+    width: 266px;
+    height: 260px;
+    background: #C4C4C4;   
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    margin-bottom: 43px;
+    margin-right: 43px;
+}
+
 #descripcionObra{
     width: 750px;
-    height: 290px;
+    height: 260px;
     background: #C4C4C4;   
     border: 1px solid #000000;
     box-sizing: border-box;

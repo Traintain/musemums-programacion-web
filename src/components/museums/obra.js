@@ -5,8 +5,8 @@ function Obra(props) {
   const [description] = useState(props.obra.description);
 
   return (
-    <div className="row d-flex justify-content-around">
-      <div className="card">
+    <div className="row">
+      <div className="card" id="tarjetaObra">
         <img
           className="card-img-top mx-auto"
           id="imagenObra"
