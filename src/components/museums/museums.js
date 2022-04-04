@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
+import Museum from "./museum";
+import Obra from "./obra";
 
 function Museums() {
   const url = "https://back-museums-uniandes.herokuapp.com/api/museums";
 
   const [museums, setMuseums] = useState([]);
+
+  const [selectedMuseumId, setSelectedMuseum] = useState();
 
   useEffect(() => {
     fetch(url)
@@ -14,44 +18,49 @@ function Museums() {
       });
   }, []);
 
-  return (
-    <div className="container">
-      <div className="row mt-3">
-        <p>Home &gt; Museos</p>
-      </div>
+  const selectMuseums = (id) => {
+    console.log("Id del museo: ", id);
+    setSelectedMuseum(id);
+  };
 
-      <div className="row" id="vitrina">
-        <h1 id="tituloVitrina">MUSEOS</h1>
-      </div>
+  const showMuseums = (titulo) => {
+    const vitrina = document.getElementById("tituloVitrina");
+    vitrina.innerHTML = titulo;
+  };
 
-      <div className="pb-4">
-        <hr></hr>
-      </div>
-
-      <div className="row d-flex justify-content-around">
-        {museums.map((museums) => (
-          <div className="card" key={museums.id}>
-            <img
-              className="card-img-top mx-auto"
-              id="imagenMuseo"
-              src={museums.image}
-              alt={museums.name}
-            ></img>
-            <div className="card-body">
-              <p className="card-text" id="nombreGaleria">
-                {museums.name}
-              </p>
-              <p className="card-text" id="nombreCiudad">
-                {museums.city}
-              </p>
-            </div>
+  if (selectedMuseumId === undefined) {
+    return (
+      showMuseums("MUSEOS"),
+      (
+        <div className="container">
+          <div className="row d-flex justify-content-around">
+            {museums.map((p) => (
+              <Museum
+                key={p.id}
+                museum={p}
+                onClick={(id) => selectMuseums(id)}
+              />
+            ))}
           </div>
-        ))}
-      </div>
-
-      <ul>{}</ul>
-    </div>
-  );
+        </div>
+      )
+    );
+  } else {
+    return (
+      showMuseums(
+        museums.find((museum) => museum.id === selectedMuseumId).name
+      ),
+      (
+        <div className="container mx-5">
+          {museums
+            .find((museum) => museum.id === selectedMuseumId)
+            .artworks.map((p) => (
+              <Obra key={p.id} obra={p} />
+            ))}
+        </div>
+      )
+    );
+  }
 }
 
 export default Museums;
