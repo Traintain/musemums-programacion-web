@@ -35,6 +35,7 @@ function Museums() {
           <div className="row mt-3">
             <nav id="myBreadcrumb" aria-label="breadcrumb">
               <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Museos</li>
               </ol>
             </nav>
@@ -66,6 +67,7 @@ function Museums() {
           <div className="row mt-3">
             <nav id="myBreadcrumb" aria-label="breadcrumb">
               <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
                 <li class="breadcrumb-item" onClick = {resetMuseum}><a href="">Museos</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{museums.find((museum) => museum.id === selectedMuseumId).name}</li>
               </ol>
