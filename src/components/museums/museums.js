@@ -23,16 +23,30 @@ function Museums() {
     setSelectedMuseum(id);
   };
 
-  const showMuseums = (titulo) => {
-    const vitrina = document.getElementById("tituloVitrina");
-    vitrina.innerHTML = titulo;
-  };
+  const resetMuseum = () =>{
+    selectedMuseumId = undefined;
+  }
 
   if (selectedMuseumId === undefined) {
     return (
-      showMuseums("MUSEOS"),
       (
         <div className="container">
+
+          <div className="row mt-3">
+            <nav id="myBreadcrumb" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Museos</li>
+              </ol>
+            </nav>
+          </div>
+      
+          <div className="row" id="vitrina">
+            <h1 id="tituloVitrina">MUSEOS</h1>
+          </div>
+      
+          <div className="pb-4">
+            <hr></hr>
+          </div>
           <div className="row d-flex justify-content-around">
             {museums.map((p) => (
               <Museum
@@ -47,16 +61,31 @@ function Museums() {
     );
   } else {
     return (
-      showMuseums(
-        museums.find((museum) => museum.id === selectedMuseumId).name
-      ),
       (
-        <div className="container mx-5">
-          {museums
-            .find((museum) => museum.id === selectedMuseumId)
-            .artworks.map((p) => (
-              <Obra key={p.id} obra={p} />
-            ))}
+        <div className = "container">
+          <div className="row mt-3">
+            <nav id="myBreadcrumb" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item" onClick = {resetMuseum}><a href="">Museos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{museums.find((museum) => museum.id === selectedMuseumId).name}</li>
+              </ol>
+            </nav>
+          </div>
+      
+          <div className="row" id="vitrina">
+            <h1 id="tituloVitrina">{museums.find((museum) => museum.id === selectedMuseumId).name}</h1>
+          </div>
+      
+          <div className="pb-4">
+            <hr></hr>
+          </div>
+          <div className="container mx-5">
+            {museums
+              .find((museum) => museum.id === selectedMuseumId)
+              .artworks.map((p) => (
+                <Obra key={p.id} obra={p} />
+              ))}
+          </div>
         </div>
       )
     );
